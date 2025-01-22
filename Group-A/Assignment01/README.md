@@ -10,8 +10,8 @@ This repository contains the implementation of two popular graph traversal algor
 - [Example](#example)
 - [Explanation of Code](#explanation-of-code)
 - [Key Concepts](#key-concepts)
-- [Depth First Search (DFS)](#depth-first-search-dfs)
-- [Breadth First Search (BFS)](#breadth-first-search-bfs)
+  - [Depth First Search (DFS)](#depth-first-search-dfs)
+  - [Breadth First Search (BFS)](#breadth-first-search-bfs)
 - [Conclusion](#conclusion)
 
 ## Overview
@@ -20,21 +20,32 @@ This program demonstrates both **Depth First Search (DFS)** and **Breadth First 
 
 ## Graph Representation
 
-An **undirected graph** is represented using an adjacency list, where each vertex stores a list of its adjacent vertices. For example, the graph:
+An **undirected graph** is represented using an adjacency list, where each vertex stores a list of its adjacent vertices. For example, consider the following graph:
 
 ```
 0 -- 1
 |    |
 2 -- 3
+|    |
+4
 ```
 
-is represented as an adjacency list:
+The graph has 5 vertices: 0, 1, 2, 3, and 4. The edges are represented as:
+
+- 0 is connected to 1 and 2.
+- 1 is connected to 0, 3, and 4.
+- 2 is connected to 0 and 3.
+- 3 is connected to 1, 2, and 4.
+- 4 is connected to 1 and 3.
+
+This graph is represented in the adjacency list as follows:
 
 ```
 0: [1, 2]
-1: [0, 3]
+1: [0, 3, 4]
 2: [0, 3]
-3: [1, 2]
+3: [1, 2, 4]
+4: [1, 3]
 ```
 
 ## DFS Algorithm
@@ -52,6 +63,9 @@ is represented as an adjacency list:
 - A `visited` array is used to ensure each vertex is visited only once.
 
 
+
+You should see the DFS and BFS traversal outputs printed to the console.
+
 ## Example
 
 Given the following graph:
@@ -60,11 +74,13 @@ Given the following graph:
 0 -- 1
 |    |
 2 -- 3
+|    |
+4
 ```
 
-DFS starting from vertex 0 will print: `0 1 3 2`
+DFS starting from vertex 0 will print: `0 1 3 4 2 `
 
-BFS starting from vertex 0 will print: `0 1 2 3`
+BFS starting from vertex 0 will print: `0 1 2 3 4`
 
 ## Explanation of Code
 
@@ -73,18 +89,18 @@ BFS starting from vertex 0 will print: `0 1 2 3`
 The Graph class represents the graph with the following member functions:
 
 - **Constructor (Graph(int v))**:
-Initializes the graph with v vertices and resizes the adjacency list to accommodate all vertices.
+  Initializes the graph with v vertices and resizes the adjacency list to accommodate all vertices.
 
 - **addEdge(int u, int v)**:
-Adds an undirected edge between vertices u and v by adding v to the adjacency list of u and u to the adjacency list of v.
+  Adds an undirected edge between vertices u and v by adding v to the adjacency list of u and u to the adjacency list of v.
 
 - **DFS(int vertex, std::vector<bool>& visited)**:
-This is a recursive function that performs a depth-first search starting from the given vertex.
-It marks the vertex as visited, prints it, and recursively visits all its unvisited neighbors.
+  This is a recursive function that performs a depth-first search starting from the given vertex.
+  It marks the vertex as visited, prints it, and recursively visits all its unvisited neighbors.
 
 - **BFS(int start)**:
-This function performs a breadth-first search starting from the start vertex.
-It uses a queue to explore vertices level by level, printing each vertex as it is visited.
+  This function performs a breadth-first search starting from the start vertex.
+  It uses a queue to explore vertices level by level, printing each vertex as it is visited.
 
 ### Main Function
 
