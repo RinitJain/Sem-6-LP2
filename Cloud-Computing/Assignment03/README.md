@@ -13,19 +13,19 @@ Visualforce is a **markup language for creating custom user interfaces** in Sale
 ### 1. Create the Apex Controller
 1. Open **Developer Console** in Salesforce.
 2. Click **File → New → Apex Class**.
-3. Name it `calculator` (this is your Controller code).
+3. Name it `calculator.apxc` (this is your Controller code).
 4. Paste the Apex controller code.
 5. Save the file.
 
 ### 2. Create the Visualforce Page
 1. Open **Developer Console**.
 2. Click **File → New → Visualforce Page**.
-3. Name it `calculatorUI` (this is a '.vfp' file).
+3. Name it `calculatorUI.vfp`.
 4. Paste the Visualforce page code.
 5. Save the file.
 
 ### 3. Run the Application
-1. Open 'caculator.vfp' page and click on **Preview**.
+1. Open `calculatorUI.vfp` page and click on **Preview** (Top Left).
 3. Enter two numbers and click an operation button.
 4. The result will be displayed below the buttons.
 
