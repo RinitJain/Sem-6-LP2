@@ -1,24 +1,32 @@
-public class calculator {
-    // Method for addition
-    public static Decimal add(Decimal num1, Decimal num2) {
-        return num1 + num2;
+public class calculator{
+    public Decimal num1{ get; set;}
+    public Decimal num2{ get; set;}
+    public Decimal result{ get; set;}
+    
+    public calculator(){
+        num1=0;
+        num2=0;
+        result=0;
     }
-
-    // Method for subtraction
-    public static Decimal subtract(Decimal num1, Decimal num2) {
-        return num1 - num2;
+    
+    public void add(){
+        result = num1 + num2;
     }
-
-    // Method for multiplication
-    public static Decimal multiply(Decimal num1, Decimal num2) {
-        return num1 * num2;
+    
+    public void subtract(){
+        result = num1 - num2;
     }
-
-    // Method for division
-    public static Decimal divide(Decimal num1, Decimal num2) {
-        if (num2 == 0) {
-            throw new MathException('Cannot divide by zero');
+    
+    public void multiply() {
+        result = num1 * num2;
+    }
+    
+    public void divide(){
+        if(num2 == 0){
+         	ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR, 'Cannot divide by 0'));   
         }
-        return num1 / num2;
+        else{
+            result = num1/num2;
+        }
     }
 }
