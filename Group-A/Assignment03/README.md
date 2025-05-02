@@ -13,7 +13,7 @@ This repository contains implementations of Greedy Search Algorithms for selecte
 - Solves the Job Scheduling Problem using a greedy approach to maximize profit within deadlines.
 - Includes sample jobs and their outputs.
 
-### `Group-A/Assignment03/Prim's Minimal Spanning Tree Algorithm/`
+### `Prim's Minimal Spanning Tree Algorithm/`
 - Implements Prim's Algorithm for finding a Minimum Spanning Tree.
 - Graph input is hardcoded or taken via adjacency matrix.
 - Shows step-by-step edge selection.
