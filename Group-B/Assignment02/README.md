@@ -1,4 +1,4 @@
-# Inventory Management Chatbot
+# Elementary Chatbot for Customer Interaction
 
 This is a simple inventory management chatbot built with Python and NLTK. It allows users to interact via a conversational interface to view product prices, check stock levels, and make purchases from a predefined inventory.
 
