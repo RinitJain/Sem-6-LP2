@@ -18,7 +18,7 @@ This repository contains implementations of Greedy Search Algorithms for selecte
 - Graph input is hardcoded or taken via adjacency matrix.
 - Shows step-by-step edge selection.
 
-### `KruskalsMST/`
+### `Kruskal's Minimal Spanning Tree Algorithm/`
 - Kruskal's Algorithm implementation using Union-Find.
 - Sorts edges by weight and builds MST greedily.
 - Demonstrates cycle checking.

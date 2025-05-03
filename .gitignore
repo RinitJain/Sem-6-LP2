@@ -1,4 +1,6 @@
 .vscode
+venv/
 dummy.cpp
 dummy.exe
-mst_prims_algo.cpp
+dummy.py
+mst_prims_algo.exe
