@@ -15,7 +15,7 @@ public:
         //Accept City names
         vector<string> cities = {"X", "Y", "Z", "W", "V", "U"};
 
-        //Accept "to-from-weight" from the user
+        //Accept "from-to-weight" from the user
         vector<tuple<string, string, int>> edges = {
             {"X", "Y", 4},
             {"X", "Z", 3},
