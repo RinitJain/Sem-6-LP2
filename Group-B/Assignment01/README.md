@@ -1,4 +1,4 @@
-# N-Queen Problem
+# N-Queen Problem (Constraint Satisfaction Problem)
 
 ## What is the N-Queen Problem?
 
