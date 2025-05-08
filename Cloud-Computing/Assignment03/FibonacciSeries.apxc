@@ -1,0 +1,22 @@
+public class FibonacciSeries {
+
+    // Method to generate and return Fibonacci series
+    public static List<Integer> generateFibonacci(Integer terms) {
+        List<Integer> series = new List<Integer>();
+        
+        if (terms <= 0) return series;
+        if (terms >= 1) series.add(0);
+        if (terms >= 2) series.add(1);
+
+        for (Integer i = 2; i < terms; i++) {
+            Integer next = series[i - 1] + series[i - 2];
+            series.add(next);
+        }
+
+        return series;
+    }
+}
+
+
+//List<Integer> fib = FibonacciSeries.generateFibonacci(10);
+//System.debug('Fibonacci Series (10 terms): ' + fib);
