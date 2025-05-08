@@ -1,0 +1,27 @@
+public class GeometryAreaCalculator {
+    
+    public static Decimal calculateCircleArea(Decimal radius) {
+        return Math.PI * radius * radius;
+    }
+
+    public static Decimal calculateRectangleArea(Decimal length, Decimal width) {
+        return length * width;
+    }
+
+    public static Decimal calculateTriangleArea(Decimal base, Decimal height) {
+        return 0.5 * base * height;
+    }
+}
+
+
+
+Developer Console → Debug → Open Execute Anonymous Window:
+
+Decimal circleArea = GeometryAreaCalculator.calculateCircleArea(5);
+System.debug('Area of Circle: ' + circleArea);
+
+Decimal rectangleArea = GeometryAreaCalculator.calculateRectangleArea(10, 4);
+System.debug('Area of Rectangle: ' + rectangleArea);
+
+Decimal triangleArea = GeometryAreaCalculator.calculateTriangleArea(6, 3);
+System.debug('Area of Triangle: ' + triangleArea);
