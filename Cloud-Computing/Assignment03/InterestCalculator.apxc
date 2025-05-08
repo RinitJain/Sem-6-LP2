@@ -1,0 +1,27 @@
+public class InterestCalculator {
+
+    // Method to calculate Simple Interest
+    public static Decimal calculateSimpleInterest(Decimal principal, Decimal rate, Decimal t) {
+        return (principal * rate * t) / 100;
+    }
+
+    // Method to calculate Compound Interest (using exp and log)
+    public static Decimal calculateCompoundInterest(Decimal principal, Decimal rate, Decimal t) {
+        Decimal base = 1 + rate / 100;
+        Decimal exponent = t * Math.log(base);
+        Decimal amount = principal * Math.exp(exponent);
+        return amount - principal;
+    }
+}
+
+
+//Decimal principal = 10000;
+//Decimal rate = 5;
+//Decimal t = 2;
+
+//Decimal si = InterestCalculator.calculateSimpleInterest(principal, rate, t);
+//System.debug('Simple Interest = ' + si);
+
+//Decimal ci = InterestCalculator.calculateCompoundInterest(principal, rate, t);
+//System.debug('Compound Interest = ' + ci);
+
