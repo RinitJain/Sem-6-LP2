@@ -1,0 +1,71 @@
+public class ScientificCalc {
+
+    // Add two numbers
+    public static Double add(Double num1, Double num2){
+        return num1 + num2;
+    }
+
+    // Subtract two numbers
+    public static Double subtract(Double num1, Double num2){
+        return num1 - num2;
+    }
+
+    // Multiply two numbers
+    public static Double multiply(Double num1, Double num2){
+        return num1 * num2;
+    }
+
+    // Divide two numbers
+    public static Double divide(Double num1, Double num2){
+        if(num2 == 0){
+            System.debug('Error: Cannot divide by zero');
+            return null;
+        }
+        return num1 / num2;
+    }
+
+    // Square root
+    public static Double squareRoot(Double num){
+        if(num < 0){
+            System.debug('Error: Cannot calculate the square root of a negative number');
+            return null;
+        }
+        return Math.sqrt(num);
+    }
+
+    // Power
+    public static Double power(Double base, Double exponent){
+        return Math.pow(base, exponent);
+    }
+
+    // Sine (radians)
+    public static Double sine(Double angle){
+        return Math.sin(angle);
+    }
+
+    // Cosine (radians)
+    public static Double cosine(Double angle){
+        return Math.cos(angle);
+    }
+
+    // Tangent (radians)
+    public static Double tangent(Double angle){
+        return Math.tan(angle);
+    }
+
+    // Logarithm base 10
+    public static Double log10(Double num){
+        if(num <= 0){
+            System.debug('Error: Logarithm of zero or negative number is undefined');
+            return null;
+        }
+        return Math.log10(num);
+    }
+}
+
+
+//System.debug('Add: ' + ScientificCalc.add(5, 3));
+//System.debug('Divide: ' + ScientificCalc.divide(10, 0));
+//System.debug('Sine(π/2): ' + ScientificCalc.sine(Math.PI / 2));
+//System.debug('Log10(100): ' + ScientificCalc.log10(100));
+//System.debug('Square Root(-1): ' + ScientificCalc.squareRoot(-1));
