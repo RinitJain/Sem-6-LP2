@@ -1,0 +1,67 @@
+public class MatrixMultiplier {
+
+    // Method to multiply two matrices
+    public static List<List<Integer>> multiply(List<List<Integer>> matrixA, List<List<Integer>> matrixB) {
+        Integer rowsA = matrixA.size();
+        Integer colsA = matrixA[0].size();
+        Integer rowsB = matrixB.size();
+        Integer colsB = matrixB[0].size();
+
+        // Validate matrix dimensions
+        if (colsA != rowsB) {
+            System.debug('Error: Number of columns in Matrix A must equal number of rows in Matrix B.');
+            return null;
+        }
+
+        // Initialize result matrix with zeros
+        List<List<Integer>> result = new List<List<Integer>>();
+        for (Integer i = 0; i < rowsA; i++) {
+            List<Integer> row = new List<Integer>();
+            for (Integer j = 0; j < colsB; j++) {
+                row.add(0);
+            }
+            result.add(row);
+        }
+
+        // Matrix multiplication logic
+        for (Integer i = 0; i < rowsA; i++) {
+            for (Integer j = 0; j < colsB; j++) {
+                for (Integer k = 0; k < colsA; k++) {
+                    result[i][j] += matrixA[i][k] * matrixB[k][j];
+                }
+            }
+        }
+
+        return result;
+    }
+
+    // Helper method to print matrix
+    public static void printMatrix(List<List<Integer>> matrix) {
+        if (matrix == null) return;
+
+        for (List<Integer> row : matrix) {
+            System.debug(row);
+        }
+    }
+}
+
+
+
+// Define Matrix A (2x3)
+//List<List<Integer>> matrixA = new List<List<Integer>>{
+//    new List<Integer>{1, 2, 3},
+//    new List<Integer>{4, 5, 6}
+//};
+
+// Define Matrix B (3x2)
+//List<List<Integer>> matrixB = new List<List<Integer>>{
+//    new List<Integer>{7, 8},
+//    new List<Integer>{9, 10},
+//    new List<Integer>{11, 12}
+//};
+
+// Multiply Matrices
+//List<List<Integer>> result = MatrixMultiplier.multiply(matrixA, matrixB);
+
+// Print Result
+//MatrixMultiplier.printMatrix(result);
