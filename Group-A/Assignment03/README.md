@@ -9,9 +9,11 @@ This repository contains implementations of Greedy Search Algorithms for selecte
 - Example input and output.
 - Simple explanation in comments.
 
-### `JobScheduling/`
-- Solves the Job Scheduling Problem using a greedy approach to maximize profit within deadlines.
-- Includes sample jobs and their outputs.
+### `Dijkstra's Shortest Path Algorithm/`
+-Finds the shortest path from a single source to all other nodes in a weighted graph.
+-Uses a priority queue to always pick the closest unvisited node.
+-Outputs shortest distances and paths from the source node.
+-Suitable for graphs with non-negative edge weights.
 
 ### `Prim's Minimal Spanning Tree Algorithm/`
 - Implements Prim's Algorithm for finding a Minimum Spanning Tree.
