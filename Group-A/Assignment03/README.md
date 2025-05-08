@@ -5,7 +5,7 @@ This repository contains implementations of Greedy Search Algorithms for selecte
 ## Folder Structure
 
 ### `SelectionSort/`
-- Python implementation of Selection Sort using a greedy strategy.
+- C++ implementation of Selection Sort using a greedy strategy.
 - Example input and output.
 - Simple explanation in comments.
 
