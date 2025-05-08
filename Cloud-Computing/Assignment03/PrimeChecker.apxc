@@ -1,0 +1,22 @@
+public class PrimeChecker {
+    public static Boolean isPrime(Integer num) {
+        if (num <= 1) {
+            return false;
+        }
+        if (num == 2) {
+            return true;
+        }
+
+        for (Integer i = 2; i <= Math.floor(Math.sqrt(num)); i++) {
+            if (Math.mod(num, i) == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+
+//Integer num = 29;
+//Boolean result = PrimeChecker.isPrime(num);
+//System.debug(number + ' is prime? ' + result);
