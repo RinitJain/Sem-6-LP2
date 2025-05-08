@@ -57,6 +57,7 @@ System.debug('Triangle Area: ' + triangleArea);
 
 ## Output
 After executing the code, you will see the calculated areas in the logs:
+(Click on the 'Debug Only' checkbox below to filter out unnecessary logs)
 
 ```
 Circle Area: 78.53981633974483
