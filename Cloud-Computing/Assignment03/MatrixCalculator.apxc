@@ -1,0 +1,46 @@
+public class MatrixCalculator {
+
+    // Method to add two matrices
+    public static List<List<Integer>> addMatrices(List<List<Integer>> matrixA, List<List<Integer>> matrixB) {
+        List<List<Integer>> result = new List<List<Integer>>();
+        
+        // Basic validation
+        if (matrixA.size() != matrixB.size()) {
+            System.debug('Matrices must have the same number of rows');
+            return result;
+        }
+
+        for (Integer i = 0; i < matrixA.size(); i++) {
+            List<Integer> rowA = matrixA[i];
+            List<Integer> rowB = matrixB[i];
+            
+            if (rowA.size() != rowB.size()) {
+                System.debug('Matrices must have the same number of columns in row ' + i);
+                return new List<List<Integer>>();
+            }
+
+            List<Integer> rowResult = new List<Integer>();
+            for (Integer j = 0; j < rowA.size(); j++) {
+                rowResult.add(rowA[j] + rowB[j]);
+            }
+            result.add(rowResult);
+        }
+
+        return result;
+    }
+}
+
+
+
+//List<List<Integer>> matA = new List<List<Integer>>{
+//    new List<Integer>{1, 2, 3},
+//    new List<Integer>{4, 5, 6}
+//};
+
+//List<List<Integer>> matB = new List<List<Integer>>{
+//    new List<Integer>{7, 8, 9},
+//    new List<Integer>{10, 11, 12}
+//};
+
+//List<List<Integer>> sum = MatrixCalculator.addMatrices(matA, matB);
+//System.debug('Matrix Addition Result: ' + sum);
