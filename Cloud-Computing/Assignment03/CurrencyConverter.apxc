@@ -1,0 +1,32 @@
+public class CurrencyConverter {
+
+    // Hardcoded exchange rates (example: USD base)
+    static Map<String, Decimal> exchangeRates = new Map<String, Decimal>{
+        'USD_TO_EUR' => 0.91,
+        'USD_TO_INR' => 88.10,
+        'USD_TO_GBP' => 0.79,
+        'EUR_TO_USD' => 1.10,
+        'INR_TO_USD' => 0.011,
+        'GBP_TO_USD' => 1.27
+    };
+
+    // Method to convert currency
+    public static Decimal convert(String fromCurrency, String toCurrency, Decimal amount) {
+        String key = fromCurrency + '_TO_' + toCurrency;
+        if (exchangeRates.containsKey(key)) {
+            return amount * exchangeRates.get(key);
+        } else {
+            System.debug('Conversion rate not found for ' + key);
+            return 0;
+        }
+    }
+}
+
+
+
+Decimal amountInUSD = 100;
+Decimal amountInINR = CurrencyConverter.convert('USD', 'INR', amountInUSD);
+System.debug('100 USD in INR = ' + amountInINR);
+
+Decimal amountInEUR = CurrencyConverter.convert('INR', 'USD', 8300);
+System.debug('8300 INR in USD = ' + amountInEUR);
