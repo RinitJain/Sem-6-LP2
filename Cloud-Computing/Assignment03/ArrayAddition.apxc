@@ -1,0 +1,39 @@
+public class arrayAddition{
+    public static List<Integer> addArray(string arrayInput1, string arrayInput2){
+        List<Integer>array1 = parseInt(arrayInput1);
+        List<Integer>array2 = parseInt(arrayInput2);
+        List<Integer>result = new List<Integer>();
+        
+        Integer maxLength = Math.max(array1.size(), array2.size());
+        for(Integer i = 0; i<maxLength; i++){
+            Integer val1 = i<array1.size() ? array1[i] : 0;
+            Integer val2 = i<array2.size() ? array2[i] : 0;
+            result.add(val1 + val2);
+        }
+        
+        return result;
+    }
+    
+    private static List<Integer>parseInt(string input){
+        List<Integer>intValues = new List<Integer>();
+        for(String val : input.split(',')){
+            val = val.trim();
+            if(val != ''){
+                intValues.add(Integer.valueOf(val));
+            }
+        }
+        
+        return intValues;
+    }
+} 
+
+
+debug -> Open Execute Anonymous Window ->
+
+String array1 = '10, 20, 30';
+String array2 = '1, 2, 3, 4';
+
+List<Integer> result = arrayAddition.addArray(array1, array2);
+System.debug('Result: '+result);
+
+Execute->Debug check Box
